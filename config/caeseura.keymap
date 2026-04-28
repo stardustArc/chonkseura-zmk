@@ -3,6 +3,20 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        v_combo {
+            bindings = <&kp V>;
+            key-positions = <29 28>;
+        };
+
+        j-combo {
+            bindings = <&kp J>;
+            key-positions = <4 3>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -31,6 +45,24 @@
 &kp TAB    &trans        &trans      &trans         &trans        &kp F1         &kp MINUS         &kp EQUAL     &kp LBKT      &kp RBKT      &kp BSLH      &kp GRAVE
 &kp LSHFT  &trans        &trans      &trans         &trans        &trans         &kp LS(UNDER)     &kp LS(PLUS)  &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(PIPE)  &kp UP     &kp LS(GRAVE)
 &kp LCTRL  &kp LGUI                                 &trans        &kp RET        &kp SPACE         &trans                                    &kp LEFT      &kp DOWN   &kp RIGHT
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&kp ESC    &kp Q     &kp W  &kp F  &kp P   &kp B      &kp K     &kp L      &kp U  &kp Y      &kp SQT   &kp SEMI  &trans
+&kp TAB    &kp A     &kp R  &kp S  &kp T   &kp G      &kp M     &kp N      &kp E  &kp I      &kp O     &kp RET
+&kp LSHFT  &kp Z     &kp X  &kp C  &kp D   &trans     &trans    &trans     &kp H  &kp COMMA  &kp DOT   &kp UP    &trans
+&kp LCTRL  &kp RALT                &trans  &kp SPACE  &kp BSPC  &kp RSHFT                    &kp LEFT  &kp DOWN  &kp RIGHT
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                  &trans  &trans  &trans  &trans                  &trans  &trans  &trans
             >;
         };
     };
