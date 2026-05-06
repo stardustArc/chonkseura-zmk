@@ -9,11 +9,13 @@
         v_combo {
             bindings = <&kp V>;
             key-positions = <29 28>;
+            layers = <0>;
         };
 
         j-combo {
             bindings = <&kp J>;
             key-positions = <4 3>;
+            layers = <0>;
         };
     };
 
